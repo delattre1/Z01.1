@@ -10,22 +10,18 @@
 leaw $5, %A
 movw (%A), %D
 leaw $1, %A
-andw %A, %D, %D ;Se for impar, 1. Se for par, 0.
-
+andw %A, %D, %D
 leaw $ELSE, %A
 jg %D
 nop
-
-leaw $1, %A ;  if
+leaw $1, %A
 movw %A, %D
-
-
 leaw $END, %A
 jmp
 nop
 
 ELSE: 
-leaw $0, %A ; else
+leaw $0, %A
 movw %A, %D
 
 END:
