@@ -1,5 +1,5 @@
 import random
-from numpy import mean
+from numpy import mean, ceil
 
 modulos=["BinaryDigit",
          "FlipFlopD",
@@ -23,9 +23,7 @@ assign={"Dani":[],
         "Leo":[],
         "Joao":[]}
 
-qtd=int(round(len(modulos)/len(assign)))
-print(qtd)
-
+qtd=ceil(len(modulos)/len(assign))
 
 while modulos != []:
     for i in assign.keys():
